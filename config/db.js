@@ -2,12 +2,10 @@ import mongoose from "mongoose";
 
 const connectDB = async () => {
   try {
-    console.log("🔄 Attempting to connect to MongoDB...");
+    console.log("Attempting to connect to MongoDB...");
     
-    // You can replace this with your actual MongoDB URI
-    // For local development, use: mongodb://localhost:27017/printsaarthi
-    // For MongoDB Atlas, use: mongodb+srv://username:password@cluster.mongodb.net/printsaarthi
-    const mongoURI = process.env.MONGO_URI || "mongodb://localhost:27017/printsaarthi";
+   
+    const mongoURI = process.env.MONGO_URI ;
     
     console.log(`📍 Connecting to: ${mongoURI.replace(/\/\/.*@/, '//***:***@')}`);
     
